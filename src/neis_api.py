@@ -29,7 +29,7 @@ def neis_get_school_info(school_name: str):
     params = {
         'Type': 'json',
         'pIndex': '1',
-        'pSize': '100' if not degraded else '5',
+        'pSize': '999' if not degraded else '5',
         'SCHUL_NM': school_name    
     }
     if not degraded:
@@ -82,7 +82,7 @@ def neis_get_school_schedule(school_code, org_code, from_date, to_date):
     params = {
         'Type': 'json',
         'pIndex': '1',
-        'pSize': '100' if not degraded else '5',
+        'pSize': '999' if not degraded else '5',
         'SD_SCHUL_CODE': school_code,
         'ATPT_OFCDC_SC_CODE': org_code,
         'AA_FROM_YMD': from_date,
