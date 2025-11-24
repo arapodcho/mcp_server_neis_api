@@ -16,9 +16,9 @@ def get_school_schedule(school_code:str, org_code:str, from_date:str, to_date:st
     return result
 
 @mcp.tool()
-def get_school_schedule_by_name(school_name:str, from_date:str, to_date:str, grade:list=[1,2,3], target_org=None)->dict:
+def get_school_schedule_by_name(school_name:str, from_date:str, to_date:str)->dict:
     """학교 이름을 입력으로 일정을 조회합니다.(일정: YYYYMMDD)"""
-    result = neis_get_school_schedule_by_name(school_name, from_date, to_date, grade, target_org)
+    result = neis_get_school_schedule_by_name(school_name, from_date, to_date)
     return result
     
 if __name__ == "__main__":
