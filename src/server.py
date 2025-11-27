@@ -1,7 +1,9 @@
 from mcp.server.fastmcp import FastMCP
 from neis_api import neis_get_school_info, neis_get_school_schedule, neis_get_school_schedule_by_name
 
-mcp = FastMCP("neis_org")
+mcp = FastMCP("neis_org",
+              host="0.0.0.0",
+              port=8051)
 
 @mcp.tool()
 def get_school_info(school_name:str)->dict:
